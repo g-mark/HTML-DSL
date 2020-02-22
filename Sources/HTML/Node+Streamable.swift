@@ -50,7 +50,6 @@ public struct StreamableNode: TextOutputStreamable {
             
         case let .element(tag, attributes, child):
             if mode == .pretty {
-                target.write("\n")
                 target.write(String(repeating: "\t", count: depth))
             }
             
@@ -70,11 +69,13 @@ public struct StreamableNode: TextOutputStreamable {
                 
                 if child.hasContent {
                     let preferredMode = tag.preferredRenderMode ?? mode
+                    if preferredMode == .pretty {
+                        target.write("\n")
+                    }
                     
                     write(child, to: &target, depth: depth + 1, mode: preferredMode)
                     
                     if preferredMode == .pretty {
-                        target.write("\n")
                         target.write(String(repeating: "\t", count: depth))
                     }
                 }
@@ -86,14 +87,19 @@ public struct StreamableNode: TextOutputStreamable {
             else {
                 target.write("/>")
             }
+            if mode == .pretty {
+                target.write("\n")
+            }
             
         case let .text(value):
             if !value.isEmpty {
                 if mode == .pretty {
-                    target.write("\n")
                     target.write(String(repeating: "\t", count: depth))
                 }
                 target.write(value)
+                if mode == .pretty {
+                    target.write("\n")
+                }
             }
             
         case let .comment(value):
