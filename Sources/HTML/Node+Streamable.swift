@@ -110,7 +110,7 @@ public struct StreamableNode: TextOutputStreamable {
         case let .documentType(name):
             target.write("<!DOCTYPE ")
             target.write(name)
-            target.write(">")
+            target.write(">\n")
             
         case let .fragment(children):
             for child in children {
