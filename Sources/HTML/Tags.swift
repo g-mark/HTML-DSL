@@ -16,18 +16,18 @@
 ///      - href: The URL of a linked resource.
 ///      - hreflang: Specifies the language of the linked resource.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - ping: The ping attribute specifies a space-separated list of URLs to be notified if a user follows the hyperlink.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
 ///      - rel: Specifies the relationship of the target object to the link object.
-///      - shape: 
+///      - shape:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
+///      - target:
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
 public func a(
@@ -91,18 +91,18 @@ public func a(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "a", attributes: combined, child: children().asNode())
+    
+    return .element(.a, attributes: combined, child: children().asNode())
 }
 
 /// abbr
@@ -120,7 +120,7 @@ public func a(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -171,18 +171,18 @@ public func abbr(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "abbr", attributes: combined, child: children().asNode())
+    
+    return .element(.abbr, attributes: combined, child: children().asNode())
 }
 
 /// acronym
@@ -200,7 +200,7 @@ public func abbr(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -251,18 +251,18 @@ public func acronym(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "acronym", attributes: combined, child: children().asNode())
+    
+    return .element(.acronym, attributes: combined, child: children().asNode())
 }
 
 /// address
@@ -280,7 +280,7 @@ public func acronym(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -331,18 +331,18 @@ public func address(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "address", attributes: combined, child: children().asNode())
+    
+    return .element(.address, attributes: combined, child: children().asNode())
 }
 
 /// applet
@@ -364,7 +364,7 @@ public func address(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -423,18 +423,18 @@ public func applet(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "applet", attributes: combined, child: children().asNode())
+    
+    return .element(.applet, attributes: combined, child: children().asNode())
 }
 
 /// area
@@ -457,18 +457,18 @@ public func applet(
 ///      - href: The URL of a linked resource.
 ///      - hreflang: Specifies the language of the linked resource.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - ping: The ping attribute specifies a space-separated list of URLs to be notified if a user follows the hyperlink.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
 ///      - rel: Specifies the relationship of the target object to the link object.
-///      - shape: 
+///      - shape:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
+///      - target:
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
 public func area(
@@ -535,18 +535,18 @@ public func area(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "area", attributes: combined, child: nil)
+    
+    return .element(.area, attributes: combined, child: nil)
 }
 
 /// article
@@ -564,7 +564,7 @@ public func area(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -615,18 +615,18 @@ public func article(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "article", attributes: combined, child: children().asNode())
+    
+    return .element(.article, attributes: combined, child: children().asNode())
 }
 
 /// aside
@@ -644,7 +644,7 @@ public func article(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -695,18 +695,18 @@ public func aside(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "aside", attributes: combined, child: children().asNode())
+    
+    return .element(.aside, attributes: combined, child: children().asNode())
 }
 
 /// audio
@@ -728,7 +728,7 @@ public func aside(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - muted: Indicates whether the audio will be initially silenced on page load.
@@ -799,18 +799,18 @@ public func audio(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "audio", attributes: combined, child: children().asNode())
+    
+    return .element(.audio, attributes: combined, child: children().asNode())
 }
 
 /// b
@@ -828,7 +828,7 @@ public func audio(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -879,18 +879,18 @@ public func b(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "b", attributes: combined, child: children().asNode())
+    
+    return .element(.b, attributes: combined, child: children().asNode())
 }
 
 /// base
@@ -909,13 +909,13 @@ public func b(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - href: The URL of a linked resource.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
+///      - target:
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
 public func base(
@@ -964,18 +964,18 @@ public func base(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "base", attributes: combined, child: nil)
+    
+    return .element(.base, attributes: combined, child: nil)
 }
 
 /// basefont
@@ -994,7 +994,7 @@ public func base(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1047,18 +1047,18 @@ public func basefont(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "basefont", attributes: combined, child: children().asNode())
+    
+    return .element(.basefont, attributes: combined, child: children().asNode())
 }
 
 /// bdi
@@ -1076,7 +1076,7 @@ public func basefont(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1127,18 +1127,18 @@ public func bdi(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "bdi", attributes: combined, child: children().asNode())
+    
+    return .element(.bdi, attributes: combined, child: children().asNode())
 }
 
 /// bdo
@@ -1156,7 +1156,7 @@ public func bdi(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1207,18 +1207,18 @@ public func bdo(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "bdo", attributes: combined, child: children().asNode())
+    
+    return .element(.bdo, attributes: combined, child: children().asNode())
 }
 
 /// bgsound
@@ -1236,7 +1236,7 @@ public func bdo(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -1290,18 +1290,18 @@ public func bgsound(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "bgsound", attributes: combined, child: children().asNode())
+    
+    return .element(.bgsound, attributes: combined, child: children().asNode())
 }
 
 /// big
@@ -1319,7 +1319,7 @@ public func bgsound(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1370,18 +1370,18 @@ public func big(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "big", attributes: combined, child: children().asNode())
+    
+    return .element(.big, attributes: combined, child: children().asNode())
 }
 
 /// blink
@@ -1399,7 +1399,7 @@ public func big(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1450,18 +1450,18 @@ public func blink(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "blink", attributes: combined, child: children().asNode())
+    
+    return .element(.blink, attributes: combined, child: children().asNode())
 }
 
 /// blockquote
@@ -1480,7 +1480,7 @@ public func blink(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1533,18 +1533,18 @@ public func blockquote(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "blockquote", attributes: combined, child: children().asNode())
+    
+    return .element(.blockquote, attributes: combined, child: children().asNode())
 }
 
 /// body
@@ -1564,7 +1564,7 @@ public func blockquote(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1619,18 +1619,18 @@ public func body(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "body", attributes: combined, child: children().asNode())
+    
+    return .element(.body, attributes: combined, child: children().asNode())
 }
 
 /// br
@@ -1648,7 +1648,7 @@ public func body(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1698,18 +1698,18 @@ public func br(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "br", attributes: combined, child: nil)
+    
+    return .element(.br, attributes: combined, child: nil)
 }
 
 /// button
@@ -1735,7 +1735,7 @@ public func br(
 ///      - formtarget: If the button/input is a submit button (type="submit"), this attribute specifies the browsing context (for example, tab, window, or inline frame) in which to display the response that is received after submitting the form. If this attribute is specified, it overrides the target attribute of the button's form owner.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -1811,18 +1811,18 @@ public func button(
         "type": type,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "button", attributes: combined, child: children().asNode())
+    
+    return .element(.button, attributes: combined, child: children().asNode())
 }
 
 /// canvas
@@ -1841,7 +1841,7 @@ public func button(
 ///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1897,18 +1897,18 @@ public func canvas(
         "translate": translate,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "canvas", attributes: combined, child: children().asNode())
+    
+    return .element(.canvas, attributes: combined, child: children().asNode())
 }
 
 /// caption
@@ -1927,7 +1927,7 @@ public func canvas(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1980,18 +1980,18 @@ public func caption(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "caption", attributes: combined, child: children().asNode())
+    
+    return .element(.caption, attributes: combined, child: children().asNode())
 }
 
 /// center
@@ -2009,7 +2009,7 @@ public func caption(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2060,18 +2060,18 @@ public func center(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "center", attributes: combined, child: children().asNode())
+    
+    return .element(.center, attributes: combined, child: children().asNode())
 }
 
 /// cite
@@ -2089,7 +2089,7 @@ public func center(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2140,18 +2140,18 @@ public func cite(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "cite", attributes: combined, child: children().asNode())
+    
+    return .element(.cite, attributes: combined, child: children().asNode())
 }
 
 /// code
@@ -2169,7 +2169,7 @@ public func cite(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2220,18 +2220,18 @@ public func code(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "code", attributes: combined, child: children().asNode())
+    
+    return .element(.code, attributes: combined, child: children().asNode())
 }
 
 /// col
@@ -2251,10 +2251,10 @@ public func code(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - span: 
+///      - span:
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
@@ -2308,18 +2308,18 @@ public func col(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "col", attributes: combined, child: nil)
+    
+    return .element(.col, attributes: combined, child: nil)
 }
 
 /// colgroup
@@ -2339,10 +2339,10 @@ public func col(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - span: 
+///      - span:
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
@@ -2397,18 +2397,18 @@ public func colgroup(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "colgroup", attributes: combined, child: children().asNode())
+    
+    return .element(.colgroup, attributes: combined, child: children().asNode())
 }
 
 /// command
@@ -2429,9 +2429,9 @@ public func colgroup(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - icon: Specifies a picture which represents the command.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
-///      - radiogroup: 
+///      - radiogroup:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
@@ -2492,18 +2492,18 @@ public func command(
         "translate": translate,
         "type": type
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "command", attributes: combined, child: children().asNode())
+    
+    return .element(.command, attributes: combined, child: children().asNode())
 }
 
 /// content
@@ -2521,7 +2521,7 @@ public func command(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2572,18 +2572,18 @@ public func content(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "content", attributes: combined, child: children().asNode())
+    
+    return .element(.content, attributes: combined, child: children().asNode())
 }
 
 /// data
@@ -2601,7 +2601,7 @@ public func content(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2655,18 +2655,18 @@ public func data(
         "translate": translate,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "data", attributes: combined, child: children().asNode())
+    
+    return .element(.data, attributes: combined, child: children().asNode())
 }
 
 /// datalist
@@ -2684,7 +2684,7 @@ public func data(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2735,18 +2735,18 @@ public func datalist(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "datalist", attributes: combined, child: children().asNode())
+    
+    return .element(.datalist, attributes: combined, child: children().asNode())
 }
 
 /// dd
@@ -2764,7 +2764,7 @@ public func datalist(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2815,18 +2815,18 @@ public func dd(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "dd", attributes: combined, child: children().asNode())
+    
+    return .element(.dd, attributes: combined, child: children().asNode())
 }
 
 /// del
@@ -2846,7 +2846,7 @@ public func dd(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2901,18 +2901,18 @@ public func del(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "del", attributes: combined, child: children().asNode())
+    
+    return .element(.del, attributes: combined, child: children().asNode())
 }
 
 /// details
@@ -2930,7 +2930,7 @@ public func del(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - `open`: Indicates whether the details will be shown on page load.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -2984,18 +2984,18 @@ public func details(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "details", attributes: combined, child: children().asNode())
+    
+    return .element(.details, attributes: combined, child: children().asNode())
 }
 
 /// dfn
@@ -3013,7 +3013,7 @@ public func details(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3064,18 +3064,18 @@ public func dfn(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "dfn", attributes: combined, child: children().asNode())
+    
+    return .element(.dfn, attributes: combined, child: children().asNode())
 }
 
 /// dialog
@@ -3093,7 +3093,7 @@ public func dfn(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3144,18 +3144,18 @@ public func dialog(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "dialog", attributes: combined, child: children().asNode())
+    
+    return .element(.dialog, attributes: combined, child: children().asNode())
 }
 
 /// dir
@@ -3173,7 +3173,7 @@ public func dialog(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3224,18 +3224,18 @@ public func dir(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "dir", attributes: combined, child: children().asNode())
+    
+    return .element(.dir, attributes: combined, child: children().asNode())
 }
 
 /// div
@@ -3253,7 +3253,7 @@ public func dir(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3304,18 +3304,18 @@ public func div(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "div", attributes: combined, child: children().asNode())
+    
+    return .element(.div, attributes: combined, child: children().asNode())
 }
 
 /// dl
@@ -3333,7 +3333,7 @@ public func div(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3384,18 +3384,18 @@ public func dl(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "dl", attributes: combined, child: children().asNode())
+    
+    return .element(.dl, attributes: combined, child: children().asNode())
 }
 
 /// dt
@@ -3413,7 +3413,7 @@ public func dl(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3464,18 +3464,18 @@ public func dt(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "dt", attributes: combined, child: children().asNode())
+    
+    return .element(.dt, attributes: combined, child: children().asNode())
 }
 
 /// element
@@ -3493,7 +3493,7 @@ public func dt(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3544,18 +3544,18 @@ public func element(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "element", attributes: combined, child: children().asNode())
+    
+    return .element(.element, attributes: combined, child: children().asNode())
 }
 
 /// em
@@ -3573,7 +3573,7 @@ public func element(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3624,18 +3624,18 @@ public func em(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "em", attributes: combined, child: children().asNode())
+    
+    return .element(.em, attributes: combined, child: children().asNode())
 }
 
 /// embed
@@ -3654,7 +3654,7 @@ public func em(
 ///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3715,18 +3715,18 @@ public func embed(
         "type": type,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "embed", attributes: combined, child: nil)
+    
+    return .element(.embed, attributes: combined, child: nil)
 }
 
 /// fieldset
@@ -3746,7 +3746,7 @@ public func embed(
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -3804,18 +3804,18 @@ public func fieldset(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "fieldset", attributes: combined, child: children().asNode())
+    
+    return .element(.fieldset, attributes: combined, child: children().asNode())
 }
 
 /// figcaption
@@ -3833,7 +3833,7 @@ public func fieldset(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3884,18 +3884,18 @@ public func figcaption(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "figcaption", attributes: combined, child: children().asNode())
+    
+    return .element(.figcaption, attributes: combined, child: children().asNode())
 }
 
 /// figure
@@ -3913,7 +3913,7 @@ public func figcaption(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3964,18 +3964,18 @@ public func figure(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "figure", attributes: combined, child: children().asNode())
+    
+    return .element(.figure, attributes: combined, child: children().asNode())
 }
 
 /// font
@@ -3994,7 +3994,7 @@ public func figure(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4047,18 +4047,18 @@ public func font(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "font", attributes: combined, child: children().asNode())
+    
+    return .element(.font, attributes: combined, child: children().asNode())
 }
 
 /// footer
@@ -4076,7 +4076,7 @@ public func font(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4127,18 +4127,18 @@ public func footer(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "footer", attributes: combined, child: children().asNode())
+    
+    return .element(.footer, attributes: combined, child: children().asNode())
 }
 
 /// form
@@ -4161,7 +4161,7 @@ public func footer(
 ///      - enctype: Defines the content type of the form date when the method is POST.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - method: Defines which HTTP method to use when submitting the form. Can be GET (default) or POST.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -4170,7 +4170,7 @@ public func footer(
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
+///      - target:
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
 public func form(
@@ -4234,18 +4234,18 @@ public func form(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "form", attributes: combined, child: children().asNode())
+    
+    return .element(.form, attributes: combined, child: children().asNode())
 }
 
 /// frame
@@ -4263,7 +4263,7 @@ public func form(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4314,18 +4314,18 @@ public func frame(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "frame", attributes: combined, child: children().asNode())
+    
+    return .element(.frame, attributes: combined, child: children().asNode())
 }
 
 /// frameset
@@ -4343,7 +4343,7 @@ public func frame(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4394,18 +4394,18 @@ public func frameset(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "frameset", attributes: combined, child: children().asNode())
+    
+    return .element(.frameset, attributes: combined, child: children().asNode())
 }
 
 /// h1
@@ -4423,7 +4423,7 @@ public func frameset(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4474,18 +4474,18 @@ public func h1(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "h1", attributes: combined, child: children().asNode())
+    
+    return .element(.h1, attributes: combined, child: children().asNode())
 }
 
 /// h2
@@ -4503,7 +4503,7 @@ public func h1(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4554,18 +4554,18 @@ public func h2(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "h2", attributes: combined, child: children().asNode())
+    
+    return .element(.h2, attributes: combined, child: children().asNode())
 }
 
 /// h3
@@ -4583,7 +4583,7 @@ public func h2(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4634,18 +4634,18 @@ public func h3(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "h3", attributes: combined, child: children().asNode())
+    
+    return .element(.h3, attributes: combined, child: children().asNode())
 }
 
 /// h4
@@ -4663,7 +4663,7 @@ public func h3(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4714,18 +4714,18 @@ public func h4(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "h4", attributes: combined, child: children().asNode())
+    
+    return .element(.h4, attributes: combined, child: children().asNode())
 }
 
 /// h5
@@ -4743,7 +4743,7 @@ public func h4(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4794,18 +4794,18 @@ public func h5(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "h5", attributes: combined, child: children().asNode())
+    
+    return .element(.h5, attributes: combined, child: children().asNode())
 }
 
 /// h6
@@ -4823,7 +4823,7 @@ public func h5(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4874,18 +4874,18 @@ public func h6(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "h6", attributes: combined, child: children().asNode())
+    
+    return .element(.h6, attributes: combined, child: children().asNode())
 }
 
 /// head
@@ -4903,7 +4903,7 @@ public func h6(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4954,18 +4954,18 @@ public func head(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "head", attributes: combined, child: children().asNode())
+    
+    return .element(.head, attributes: combined, child: children().asNode())
 }
 
 /// header
@@ -4983,7 +4983,7 @@ public func head(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5034,18 +5034,18 @@ public func header(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "header", attributes: combined, child: children().asNode())
+    
+    return .element(.header, attributes: combined, child: children().asNode())
 }
 
 /// hgroup
@@ -5063,7 +5063,7 @@ public func header(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5114,18 +5114,18 @@ public func hgroup(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "hgroup", attributes: combined, child: children().asNode())
+    
+    return .element(.hgroup, attributes: combined, child: children().asNode())
 }
 
 /// hr
@@ -5145,7 +5145,7 @@ public func hgroup(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5199,18 +5199,18 @@ public func hr(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "hr", attributes: combined, child: nil)
+    
+    return .element(.hr, attributes: combined, child: nil)
 }
 
 /// html
@@ -5228,7 +5228,7 @@ public func hr(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - manifest: Specifies the URL of the document's cache manifest.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -5282,18 +5282,18 @@ public func html(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "html", attributes: combined, child: children().asNode())
+    
+    return .element(.html, attributes: combined, child: children().asNode())
 }
 
 /// i
@@ -5311,7 +5311,7 @@ public func html(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5362,18 +5362,18 @@ public func i(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "i", attributes: combined, child: children().asNode())
+    
+    return .element(.i, attributes: combined, child: children().asNode())
 }
 
 /// iframe
@@ -5396,7 +5396,7 @@ public func i(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - importance: Indicates the relative fetch priority for the resource.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - loading: Indicates if the element should be loaded lazily.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -5405,7 +5405,7 @@ public func i(
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - src: The URL of the embeddable content.
-///      - srcdoc: 
+///      - srcdoc:
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
@@ -5478,18 +5478,18 @@ public func iframe(
         "translate": translate,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "iframe", attributes: combined, child: children().asNode())
+    
+    return .element(.iframe, attributes: combined, child: children().asNode())
 }
 
 /// image
@@ -5507,7 +5507,7 @@ public func iframe(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5558,18 +5558,18 @@ public func image(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "image", attributes: combined, child: children().asNode())
+    
+    return .element(.image, attributes: combined, child: children().asNode())
 }
 
 /// img
@@ -5596,11 +5596,11 @@ public func image(
 ///      - importance: Indicates the relative fetch priority for the resource.
 ///      - intrinsicsize: This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute.
 ///      - ismap: Indicates that the image is part of a server-side image map.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - loading: Indicates if the element should be loaded lazily.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - sizes: 
+///      - sizes:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - src: The URL of the embeddable content.
@@ -5609,7 +5609,7 @@ public func image(
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - usemap: 
+///      - usemap:
 ///      - width: For the elements listed here, this establishes the element's width.
 public func img(
     accesskey: String? = nil,
@@ -5685,18 +5685,18 @@ public func img(
         "usemap": usemap,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "img", attributes: combined, child: nil)
+    
+    return .element(.img, attributes: combined, child: nil)
 }
 
 /// input
@@ -5715,7 +5715,7 @@ public func img(
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - dirname: 
+///      - dirname:
 ///      - disabled: Indicates whether the user can interact with the element.
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
@@ -5728,7 +5728,7 @@ public func img(
 ///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - list: Identifies a list of pre-defined options to suggest to the user.
 ///      - max: Indicates the maximum value allowed.
@@ -5745,13 +5745,13 @@ public func img(
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - src: The URL of the embeddable content.
-///      - step: 
+///      - step:
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
 ///      - type: Defines the type of the element.
-///      - usemap: 
+///      - usemap:
 ///      - value: Defines a default value which will be displayed in the element on page load.
 ///      - width: For the elements listed here, this establishes the element's width.
 public func input(
@@ -5860,18 +5860,18 @@ public func input(
         "value": value,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "input", attributes: combined, child: nil)
+    
+    return .element(.input, attributes: combined, child: nil)
 }
 
 /// ins
@@ -5891,7 +5891,7 @@ public func input(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5946,18 +5946,18 @@ public func ins(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "ins", attributes: combined, child: children().asNode())
+    
+    return .element(.ins, attributes: combined, child: children().asNode())
 }
 
 /// isindex
@@ -5975,7 +5975,7 @@ public func ins(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6026,18 +6026,18 @@ public func isindex(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "isindex", attributes: combined, child: children().asNode())
+    
+    return .element(.isindex, attributes: combined, child: children().asNode())
 }
 
 /// kbd
@@ -6055,7 +6055,7 @@ public func isindex(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6106,18 +6106,18 @@ public func kbd(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "kbd", attributes: combined, child: children().asNode())
+    
+    return .element(.kbd, attributes: combined, child: children().asNode())
 }
 
 /// keygen
@@ -6139,7 +6139,7 @@ public func kbd(
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - keytype: Specifies the type of key generated.
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -6204,18 +6204,18 @@ public func keygen(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "keygen", attributes: combined, child: children().asNode())
+    
+    return .element(.keygen, attributes: combined, child: children().asNode())
 }
 
 /// label
@@ -6235,7 +6235,7 @@ public func keygen(
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6290,18 +6290,18 @@ public func label(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "label", attributes: combined, child: children().asNode())
+    
+    return .element(.label, attributes: combined, child: children().asNode())
 }
 
 /// legend
@@ -6319,7 +6319,7 @@ public func label(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6370,18 +6370,18 @@ public func legend(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "legend", attributes: combined, child: children().asNode())
+    
+    return .element(.legend, attributes: combined, child: children().asNode())
 }
 
 /// li
@@ -6399,7 +6399,7 @@ public func legend(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6453,18 +6453,18 @@ public func li(
         "translate": translate,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "li", attributes: combined, child: children().asNode())
+    
+    return .element(.li, attributes: combined, child: children().asNode())
 }
 
 /// link
@@ -6487,12 +6487,12 @@ public func li(
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - importance: Indicates the relative fetch priority for the resource.
 ///      - integrity: Specifies a Subresource Integrity value that allows browsers to verify what they fetch.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
 ///      - rel: Specifies the relationship of the target object to the link object.
-///      - sizes: 
+///      - sizes:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
@@ -6559,18 +6559,18 @@ public func link(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "link", attributes: combined, child: nil)
+    
+    return .element(.link, attributes: combined, child: nil)
 }
 
 /// listing
@@ -6588,7 +6588,7 @@ public func link(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6639,18 +6639,18 @@ public func listing(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "listing", attributes: combined, child: children().asNode())
+    
+    return .element(.listing, attributes: combined, child: children().asNode())
 }
 
 /// main
@@ -6668,7 +6668,7 @@ public func listing(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6719,18 +6719,18 @@ public func main(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "main", attributes: combined, child: children().asNode())
+    
+    return .element(.main, attributes: combined, child: children().asNode())
 }
 
 /// map
@@ -6748,7 +6748,7 @@ public func main(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -6802,18 +6802,18 @@ public func map(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "map", attributes: combined, child: children().asNode())
+    
+    return .element(.map, attributes: combined, child: children().asNode())
 }
 
 /// mark
@@ -6831,7 +6831,7 @@ public func map(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6882,18 +6882,18 @@ public func mark(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "mark", attributes: combined, child: children().asNode())
+    
+    return .element(.mark, attributes: combined, child: children().asNode())
 }
 
 /// marquee
@@ -6912,7 +6912,7 @@ public func mark(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -6968,18 +6968,18 @@ public func marquee(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "marquee", attributes: combined, child: children().asNode())
+    
+    return .element(.marquee, attributes: combined, child: children().asNode())
 }
 
 /// menu
@@ -6997,7 +6997,7 @@ public func marquee(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7051,18 +7051,18 @@ public func menu(
         "translate": translate,
         "type": type
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "menu", attributes: combined, child: children().asNode())
+    
+    return .element(.menu, attributes: combined, child: children().asNode())
 }
 
 /// menuitem
@@ -7080,7 +7080,7 @@ public func menu(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7131,18 +7131,18 @@ public func menuitem(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "menuitem", attributes: combined, child: children().asNode())
+    
+    return .element(.menuitem, attributes: combined, child: children().asNode())
 }
 
 /// meta
@@ -7163,7 +7163,7 @@ public func menuitem(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - httpEquiv: Defines a pragma directive.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -7222,18 +7222,18 @@ public func meta(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "meta", attributes: combined, child: nil)
+    
+    return .element(.meta, attributes: combined, child: nil)
 }
 
 /// meter
@@ -7253,7 +7253,7 @@ public func meta(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - high: Indicates the lower bound of the upper range.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - low: Indicates the upper bound of the lower range.
 ///      - max: Indicates the maximum value allowed.
@@ -7323,18 +7323,18 @@ public func meter(
         "translate": translate,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "meter", attributes: combined, child: children().asNode())
+    
+    return .element(.meter, attributes: combined, child: children().asNode())
 }
 
 /// multicol
@@ -7352,7 +7352,7 @@ public func meter(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7403,18 +7403,18 @@ public func multicol(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "multicol", attributes: combined, child: children().asNode())
+    
+    return .element(.multicol, attributes: combined, child: children().asNode())
 }
 
 /// nav
@@ -7432,7 +7432,7 @@ public func multicol(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7483,18 +7483,18 @@ public func nav(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "nav", attributes: combined, child: children().asNode())
+    
+    return .element(.nav, attributes: combined, child: children().asNode())
 }
 
 /// nextid
@@ -7512,7 +7512,7 @@ public func nav(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7563,18 +7563,18 @@ public func nextid(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "nextid", attributes: combined, child: children().asNode())
+    
+    return .element(.nextid, attributes: combined, child: children().asNode())
 }
 
 /// nobr
@@ -7592,7 +7592,7 @@ public func nextid(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7643,18 +7643,18 @@ public func nobr(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "nobr", attributes: combined, child: children().asNode())
+    
+    return .element(.nobr, attributes: combined, child: children().asNode())
 }
 
 /// noembed
@@ -7672,7 +7672,7 @@ public func nobr(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7723,18 +7723,18 @@ public func noembed(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "noembed", attributes: combined, child: children().asNode())
+    
+    return .element(.noembed, attributes: combined, child: children().asNode())
 }
 
 /// noframes
@@ -7752,7 +7752,7 @@ public func noembed(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7803,18 +7803,18 @@ public func noframes(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "noframes", attributes: combined, child: children().asNode())
+    
+    return .element(.noframes, attributes: combined, child: children().asNode())
 }
 
 /// noscript
@@ -7832,7 +7832,7 @@ public func noframes(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7883,18 +7883,18 @@ public func noscript(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "noscript", attributes: combined, child: children().asNode())
+    
+    return .element(.noscript, attributes: combined, child: children().asNode())
 }
 
 /// object
@@ -7916,7 +7916,7 @@ public func noscript(
 ///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -7926,7 +7926,7 @@ public func noscript(
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
 ///      - type: Defines the type of the element.
-///      - usemap: 
+///      - usemap:
 ///      - width: For the elements listed here, this establishes the element's width.
 public func object(
     accesskey: String? = nil,
@@ -7987,18 +7987,18 @@ public func object(
         "usemap": usemap,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "object", attributes: combined, child: children().asNode())
+    
+    return .element(.object, attributes: combined, child: children().asNode())
 }
 
 /// ol
@@ -8016,7 +8016,7 @@ public func object(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - reversed: Indicates whether the list should be displayed in a descending order instead of a ascending.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8073,18 +8073,18 @@ public func ol(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "ol", attributes: combined, child: children().asNode())
+    
+    return .element(.ol, attributes: combined, child: children().asNode())
 }
 
 /// optgroup
@@ -8103,7 +8103,7 @@ public func ol(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8156,18 +8156,18 @@ public func optgroup(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "optgroup", attributes: combined, child: children().asNode())
+    
+    return .element(.optgroup, attributes: combined, child: children().asNode())
 }
 
 /// option
@@ -8186,7 +8186,7 @@ public func optgroup(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - selected: Defines a value which will be selected on page load.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8245,18 +8245,18 @@ public func option(
         "translate": translate,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "option", attributes: combined, child: children().asNode())
+    
+    return .element(.option, attributes: combined, child: children().asNode())
 }
 
 /// output
@@ -8276,7 +8276,7 @@ public func option(
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8334,18 +8334,18 @@ public func output(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "output", attributes: combined, child: children().asNode())
+    
+    return .element(.output, attributes: combined, child: children().asNode())
 }
 
 /// p
@@ -8363,7 +8363,7 @@ public func output(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8414,18 +8414,18 @@ public func p(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "p", attributes: combined, child: children().asNode())
+    
+    return .element(.p, attributes: combined, child: children().asNode())
 }
 
 /// param
@@ -8443,7 +8443,7 @@ public func p(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8499,18 +8499,18 @@ public func param(
         "translate": translate,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "param", attributes: combined, child: nil)
+    
+    return .element(.param, attributes: combined, child: nil)
 }
 
 /// picture
@@ -8528,7 +8528,7 @@ public func param(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8579,18 +8579,18 @@ public func picture(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "picture", attributes: combined, child: children().asNode())
+    
+    return .element(.picture, attributes: combined, child: children().asNode())
 }
 
 /// plaintext
@@ -8608,7 +8608,7 @@ public func picture(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8659,18 +8659,18 @@ public func plaintext(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "plaintext", attributes: combined, child: children().asNode())
+    
+    return .element(.plaintext, attributes: combined, child: children().asNode())
 }
 
 /// pre
@@ -8688,7 +8688,7 @@ public func plaintext(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8739,18 +8739,18 @@ public func pre(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "pre", attributes: combined, child: children().asNode())
+    
+    return .element(.pre, attributes: combined, child: children().asNode())
 }
 
 /// progress
@@ -8769,7 +8769,7 @@ public func pre(
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - max: Indicates the maximum value allowed.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8828,18 +8828,18 @@ public func progress(
         "translate": translate,
         "value": value
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "progress", attributes: combined, child: children().asNode())
+    
+    return .element(.progress, attributes: combined, child: children().asNode())
 }
 
 /// q
@@ -8858,7 +8858,7 @@ public func progress(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8911,18 +8911,18 @@ public func q(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "q", attributes: combined, child: children().asNode())
+    
+    return .element(.q, attributes: combined, child: children().asNode())
 }
 
 /// rb
@@ -8940,7 +8940,7 @@ public func q(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8991,18 +8991,18 @@ public func rb(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "rb", attributes: combined, child: children().asNode())
+    
+    return .element(.rb, attributes: combined, child: children().asNode())
 }
 
 /// rp
@@ -9020,7 +9020,7 @@ public func rb(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9071,18 +9071,18 @@ public func rp(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "rp", attributes: combined, child: children().asNode())
+    
+    return .element(.rp, attributes: combined, child: children().asNode())
 }
 
 /// rt
@@ -9100,7 +9100,7 @@ public func rp(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9151,18 +9151,18 @@ public func rt(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "rt", attributes: combined, child: children().asNode())
+    
+    return .element(.rt, attributes: combined, child: children().asNode())
 }
 
 /// rtc
@@ -9180,7 +9180,7 @@ public func rt(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9231,18 +9231,18 @@ public func rtc(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "rtc", attributes: combined, child: children().asNode())
+    
+    return .element(.rtc, attributes: combined, child: children().asNode())
 }
 
 /// ruby
@@ -9260,7 +9260,7 @@ public func rtc(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9311,18 +9311,18 @@ public func ruby(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "ruby", attributes: combined, child: children().asNode())
+    
+    return .element(.ruby, attributes: combined, child: children().asNode())
 }
 
 /// s
@@ -9340,7 +9340,7 @@ public func ruby(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9391,18 +9391,18 @@ public func s(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "s", attributes: combined, child: children().asNode())
+    
+    return .element(.s, attributes: combined, child: children().asNode())
 }
 
 /// samp
@@ -9420,7 +9420,7 @@ public func s(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9471,18 +9471,18 @@ public func samp(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "samp", attributes: combined, child: children().asNode())
+    
+    return .element(.samp, attributes: combined, child: children().asNode())
 }
 
 /// script
@@ -9506,7 +9506,7 @@ public func samp(
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - importance: Indicates the relative fetch priority for the resource.
 ///      - integrity: Specifies a Subresource Integrity value that allows browsers to verify what they fetch.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - language: Defines the script language used in the element.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
@@ -9581,18 +9581,18 @@ public func script(
         "translate": translate,
         "type": type
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "script", attributes: combined, child: children().asNode())
+    
+    return .element(.script, attributes: combined, child: children().asNode())
 }
 
 /// section
@@ -9610,7 +9610,7 @@ public func script(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9661,18 +9661,18 @@ public func section(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "section", attributes: combined, child: children().asNode())
+    
+    return .element(.section, attributes: combined, child: children().asNode())
 }
 
 /// select
@@ -9694,7 +9694,7 @@ public func section(
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - multiple: Indicates whether multiple values can be entered in an input of the type email or file.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -9765,18 +9765,18 @@ public func select(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "select", attributes: combined, child: children().asNode())
+    
+    return .element(.select, attributes: combined, child: children().asNode())
 }
 
 /// shadow
@@ -9794,7 +9794,7 @@ public func select(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9845,18 +9845,18 @@ public func shadow(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "shadow", attributes: combined, child: children().asNode())
+    
+    return .element(.shadow, attributes: combined, child: children().asNode())
 }
 
 /// slot
@@ -9874,7 +9874,7 @@ public func shadow(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9925,18 +9925,18 @@ public func slot(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "slot", attributes: combined, child: children().asNode())
+    
+    return .element(.slot, attributes: combined, child: children().asNode())
 }
 
 /// small
@@ -9954,7 +9954,7 @@ public func slot(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10005,18 +10005,18 @@ public func small(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "small", attributes: combined, child: children().asNode())
+    
+    return .element(.small, attributes: combined, child: children().asNode())
 }
 
 /// source
@@ -10034,10 +10034,10 @@ public func small(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - sizes: 
+///      - sizes:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - src: The URL of the embeddable content.
@@ -10099,18 +10099,18 @@ public func source(
         "translate": translate,
         "type": type
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "source", attributes: combined, child: nil)
+    
+    return .element(.source, attributes: combined, child: nil)
 }
 
 /// spacer
@@ -10128,7 +10128,7 @@ public func source(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10179,18 +10179,18 @@ public func spacer(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "spacer", attributes: combined, child: children().asNode())
+    
+    return .element(.spacer, attributes: combined, child: children().asNode())
 }
 
 /// span
@@ -10208,7 +10208,7 @@ public func spacer(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10259,18 +10259,18 @@ public func span(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "span", attributes: combined, child: children().asNode())
+    
+    return .element(.span, attributes: combined, child: children().asNode())
 }
 
 /// strike
@@ -10288,7 +10288,7 @@ public func span(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10339,18 +10339,18 @@ public func strike(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "strike", attributes: combined, child: children().asNode())
+    
+    return .element(.strike, attributes: combined, child: children().asNode())
 }
 
 /// strong
@@ -10368,7 +10368,7 @@ public func strike(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10419,18 +10419,18 @@ public func strong(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "strong", attributes: combined, child: children().asNode())
+    
+    return .element(.strong, attributes: combined, child: children().asNode())
 }
 
 /// style
@@ -10448,10 +10448,10 @@ public func strong(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - scoped: 
+///      - scoped:
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
@@ -10508,18 +10508,18 @@ public func style(
         "translate": translate,
         "type": type
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "style", attributes: combined, child: children().asNode())
+    
+    return .element(.style, attributes: combined, child: children().asNode())
 }
 
 /// sub
@@ -10537,7 +10537,7 @@ public func style(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10588,18 +10588,18 @@ public func sub(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "sub", attributes: combined, child: children().asNode())
+    
+    return .element(.sub, attributes: combined, child: children().asNode())
 }
 
 /// summary
@@ -10617,7 +10617,7 @@ public func sub(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10668,18 +10668,18 @@ public func summary(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "summary", attributes: combined, child: children().asNode())
+    
+    return .element(.summary, attributes: combined, child: children().asNode())
 }
 
 /// sup
@@ -10697,7 +10697,7 @@ public func summary(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10748,18 +10748,18 @@ public func sup(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "sup", attributes: combined, child: children().asNode())
+    
+    return .element(.sup, attributes: combined, child: children().asNode())
 }
 
 /// table
@@ -10781,12 +10781,12 @@ public func sup(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
-///      - summary: 
+///      - summary:
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
 ///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
@@ -10843,18 +10843,18 @@ public func table(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "table", attributes: combined, child: children().asNode())
+    
+    return .element(.table, attributes: combined, child: children().asNode())
 }
 
 /// tbody
@@ -10874,7 +10874,7 @@ public func table(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10929,18 +10929,18 @@ public func tbody(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "tbody", attributes: combined, child: children().asNode())
+    
+    return .element(.tbody, attributes: combined, child: children().asNode())
 }
 
 /// td
@@ -10963,7 +10963,7 @@ public func tbody(
 ///      - headers: IDs of the <th> elements which applies to this element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - rowspan: Defines the number of rows a table cell should span over.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -11027,18 +11027,18 @@ public func td(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "td", attributes: combined, child: children().asNode())
+    
+    return .element(.td, attributes: combined, child: children().asNode())
 }
 
 /// template
@@ -11056,7 +11056,7 @@ public func td(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11107,18 +11107,18 @@ public func template(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "template", attributes: combined, child: children().asNode())
+    
+    return .element(.template, attributes: combined, child: children().asNode())
 }
 
 /// textarea
@@ -11135,7 +11135,7 @@ public func template(
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - dirname: 
+///      - dirname:
 ///      - disabled: Indicates whether the user can interact with the element.
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
@@ -11144,7 +11144,7 @@ public func template(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - inputmode: Provides a hint as to the type of data that might be entered by the user while editing the element or its contents. The attribute can be used with form controls (such as the value of textarea elements), or in elements in an editing host (e.g., using contenteditable attribute).
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - maxlength: Defines the maximum number of characters allowed in the element.
 ///      - minlength: Defines the minimum number of characters allowed in the element.
@@ -11235,18 +11235,18 @@ public func textarea(
         "translate": translate,
         "wrap": wrap
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "textarea", attributes: combined, child: children().asNode())
+    
+    return .element(.textarea, attributes: combined, child: children().asNode())
 }
 
 /// tfoot
@@ -11266,7 +11266,7 @@ public func textarea(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11321,18 +11321,18 @@ public func tfoot(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "tfoot", attributes: combined, child: children().asNode())
+    
+    return .element(.tfoot, attributes: combined, child: children().asNode())
 }
 
 /// th
@@ -11355,7 +11355,7 @@ public func tfoot(
 ///      - headers: IDs of the <th> elements which applies to this element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - rowspan: Defines the number of rows a table cell should span over.
 ///      - scope: Defines the cells that the header test (defined in the th element) relates to.
@@ -11422,18 +11422,18 @@ public func th(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "th", attributes: combined, child: children().asNode())
+    
+    return .element(.th, attributes: combined, child: children().asNode())
 }
 
 /// thead
@@ -11452,7 +11452,7 @@ public func th(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11505,18 +11505,18 @@ public func thead(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "thead", attributes: combined, child: children().asNode())
+    
+    return .element(.thead, attributes: combined, child: children().asNode())
 }
 
 /// time
@@ -11535,7 +11535,7 @@ public func thead(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11588,18 +11588,18 @@ public func time(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "time", attributes: combined, child: children().asNode())
+    
+    return .element(.time, attributes: combined, child: children().asNode())
 }
 
 /// title
@@ -11617,7 +11617,7 @@ public func time(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11668,18 +11668,18 @@ public func title(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "title", attributes: combined, child: children().asNode())
+    
+    return .element(.title, attributes: combined, child: children().asNode())
 }
 
 /// tr
@@ -11699,7 +11699,7 @@ public func title(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11754,18 +11754,18 @@ public func tr(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "tr", attributes: combined, child: children().asNode())
+    
+    return .element(.tr, attributes: combined, child: children().asNode())
 }
 
 /// track
@@ -11784,14 +11784,14 @@ public func tr(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - kind: Specifies the kind of text track.
 ///      - label: Specifies a user-readable title of the text track.
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - src: The URL of the embeddable content.
-///      - srclang: 
+///      - srclang:
 ///      - style: Defines CSS styles which will override styles previously set.
 ///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
 ///      - title: Text to be displayed in a tooltip when hovering over the element.
@@ -11848,18 +11848,18 @@ public func track(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "track", attributes: combined, child: nil)
+    
+    return .element(.track, attributes: combined, child: nil)
 }
 
 /// tt
@@ -11877,7 +11877,7 @@ public func track(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11928,18 +11928,18 @@ public func tt(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "tt", attributes: combined, child: children().asNode())
+    
+    return .element(.tt, attributes: combined, child: children().asNode())
 }
 
 /// u
@@ -11957,7 +11957,7 @@ public func tt(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12008,18 +12008,18 @@ public func u(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "u", attributes: combined, child: children().asNode())
+    
+    return .element(.u, attributes: combined, child: children().asNode())
 }
 
 /// ul
@@ -12037,7 +12037,7 @@ public func u(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12088,18 +12088,18 @@ public func ul(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "ul", attributes: combined, child: children().asNode())
+    
+    return .element(.ul, attributes: combined, child: children().asNode())
 }
 
 /// var
@@ -12117,7 +12117,7 @@ public func ul(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12168,18 +12168,18 @@ public func `var`(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "var", attributes: combined, child: children().asNode())
+    
+    return .element(.var, attributes: combined, child: children().asNode())
 }
 
 /// video
@@ -12202,7 +12202,7 @@ public func `var`(
 ///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - muted: Indicates whether the audio will be initially silenced on page load.
@@ -12281,18 +12281,18 @@ public func video(
         "translate": translate,
         "width": width
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "video", attributes: combined, child: children().asNode())
+    
+    return .element(.video, attributes: combined, child: children().asNode())
 }
 
 /// wbr
@@ -12310,7 +12310,7 @@ public func video(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12360,18 +12360,18 @@ public func wbr(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "wbr", attributes: combined, child: nil)
+    
+    return .element(.wbr, attributes: combined, child: nil)
 }
 
 /// xmp
@@ -12389,7 +12389,7 @@ public func wbr(
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
+///      - itemprop:
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12440,17 +12440,17 @@ public func xmp(
         "title": title,
         "translate": translate
     ]
-
+    
     var combined = attributes.compactMapValues { $0 }
-
+    
     if !classList.isEmpty {
         combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
     }
-
+    
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
-
-    return .element(name: "xmp", attributes: combined, child: children().asNode())
+    
+    return .element(.xmp, attributes: combined, child: children().asNode())
 }
 

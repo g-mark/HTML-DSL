@@ -1,8 +1,9 @@
 import Foundation
 
 public enum Node: Equatable {
+    
     // The `Node`'s name, attribute and children.
-    indirect case element(String, [String: String], Node?)
+    indirect case element(Tag, _ attributes: [String: String], _ children: Node?)
 
     // The `Node`'s text contents.
     case text(String)
@@ -14,108 +15,20 @@ public enum Node: Equatable {
     case documentType(String)
 
     // The `Node`'s children.
-    case fragment([Node])
-
-    // Indicates that no whitespace should be added between the surrounding
-    // nodes.
-    case trim
-}
-
-extension Node: TextOutputStreamable {
-    public func write<Target>(to target: inout Target) where Target : TextOutputStream {
-        var flag = false
-        var depth = 0
-
-        write(to: &target, depth: &depth, didVisitTrim: &flag)
-    }
-
-    private func write<Target>(to target: inout Target, depth: inout Int, didVisitTrim: inout Bool) where Target : TextOutputStream {
-        defer {
-            if !isFragment {
-                didVisitTrim = self == .trim
-            }
-        }
-
-        switch self {
-        case let .element(name, attributes, child):
-            if !didVisitTrim {
-                target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
-            }
-
-            target.write("<")
-            target.write(name)
-
-            for (key, value) in attributes.sorted(by: { $0 < $1 }) {
-                target.write(" ")
-                target.write(key)
-                target.write("=\"")
-                target.write(value)
-                target.write("\"")
-            }
-
-            if let child = child {
-                target.write(">")
-
-                didVisitTrim = false
-
-                depth += 1
-                child.write(to: &target, depth: &depth, didVisitTrim: &didVisitTrim)
-                depth -= 1
-
-                if !didVisitTrim {
-                    target.write("\n")
-                    target.write(String(repeating: "\t", count: depth))
-                }
-
-                target.write("</")
-                target.write(name)
-                target.write(">")
-            } else {
-                target.write("/>")
-            }
-        case let .text(value):
-            if !didVisitTrim {
-                target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
-            }
-
-            target.write(value)
-        case let .comment(value):
-            target.write("<!-- ")
-            target.write(value)
-            target.write(" -->")
-        case let .documentType(name):
-            target.write("<!DOCTYPE ")
-            target.write(name)
-            target.write(">")
-        case let .fragment(children):
-            for child in children {
-                child.write(to: &target, depth: &depth, didVisitTrim: &didVisitTrim)
-            }
-        case .trim:
-            break
-        }
-    }
+    case fragment(_ children: [Node])
+    
 }
 
 extension Node {
-    private static let textLevelTags: Set<String> = [
-        "a", "abbr", "b", "bdi", "bdo", "br", "cite", "code", "data", "dfn", "em",
-        "i", "kbd", "mark", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp", "small",
-        "span", "strong", "sub", "sup", "time", "tt", "u", "var", "wbr",
-    ]
-
-    public static func element(name: String, attributes: [String: String] = [:], child: Node?) -> Node {
-        if Node.textLevelTags.contains(name), let child = child {
-            return Node.element(name, attributes, %child%)
-        }
-
-        return Node.element(name, attributes, child)
+    
+    public static func element(_ tag: Tag, attributes: [String: String] = [:], child: Node?) -> Node {
+        return Node.element(tag, attributes, child)
     }
+    
 }
 
 extension Node {
+    
     public static func fragment(children: [Node]) -> Node {
         let flattened = children
             .flatMap { node -> [Node] in
@@ -129,6 +42,7 @@ extension Node {
 
         return .fragment(flattened)
     }
+    
 }
 
 extension Node: ExpressibleByArrayLiteral {
@@ -143,8 +57,26 @@ extension Node: ExpressibleByStringLiteral {
     }
 }
 
-private extension Node {
-    var isFragment: Bool {
+extension Node {
+    
+    internal var hasContent: Bool {
+        switch self {
+            
+        case .element:
+            return true
+            
+        case .text(let text),
+             .comment(let text),
+             .documentType(let text):
+            return !text.isEmpty
+            
+        case .fragment(let children):
+            guard !children.isEmpty else { return false }
+            return children.firstIndex(where: { $0.hasContent }) != nil
+        }
+    }
+    
+    internal var isFragment: Bool {
         switch self {
         case .fragment:
             return true
@@ -152,4 +84,5 @@ private extension Node {
             return false
         }
     }
+    
 }

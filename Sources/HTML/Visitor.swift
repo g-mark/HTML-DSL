@@ -3,7 +3,7 @@ import Foundation
 public protocol Visitor {
     associatedtype Result
 
-    func visitElement(name: String, attributes: [String: String], child: Node?) -> Result
+    func visitElement(tag: Tag, attributes: [String: String], child: Node?) -> Result
 
     func visitText(text: String) -> Result
 
@@ -14,32 +14,36 @@ public protocol Visitor {
     func visitFragment(children: [Node]) -> Result
 
     func visitNode(_ node: Node) -> Result
-
-    func visitTrim() -> Result
 }
 
 extension Visitor {
+    
     public func visitNode(_ node: Node) -> Result {
         switch node {
-        case .element(let name, let attributes, let child):
-            return visitElement(name: name, attributes: attributes, child: child)
+            
+        case .element(let tag, let attributes, let child):
+            return visitElement(tag: tag, attributes: attributes, child: child)
+        
         case .text(let text):
             return visitText(text: text)
+        
         case .comment(let text):
             return visitComment(text: text)
+        
         case .documentType(let name):
             return visitDocumentType(name: name)
+        
         case .fragment(let children):
             return visitFragment(children: children)
-        case .trim:
-            return visitTrim()
         }
     }
+    
 }
 
 public extension Visitor where Result == Node {
-    func visitElement(name: String, attributes: [String: String], child: Node?) -> Result {
-        .element(name: name, attributes: attributes, child: child.map(visitNode))
+    
+    func visitElement(tag: Tag, attributes: [String: String], child: Node?) -> Result {
+        .element(tag, attributes: attributes, child: child.map(visitNode))
     }
 
     func visitText(text: String) -> Result {
@@ -57,8 +61,5 @@ public extension Visitor where Result == Node {
     func visitFragment(children: [Node]) -> Result {
         .fragment(children: children.map(visitNode))
     }
-
-    func visitTrim() -> Result {
-        .trim
-    }
+    
 }
